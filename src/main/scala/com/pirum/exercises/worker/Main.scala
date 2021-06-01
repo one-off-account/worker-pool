@@ -1,10 +1,14 @@
 package com.pirum.exercises.worker
 
-import scala.concurrent.duration.FiniteDuration
+import akka.actor.ActorSystem
+import com.pirum.exercises.worker.Master.{GetResult, StartJob}
+import com.pirum.exercises.worker.Program._
 
-object Main extends App with Program {
-  def program(tasks: List[Task], timeout: FiniteDuration, workers: Int): Unit =
-    ???
+object WorkerPool extends App {
 
-  println("Good luck 🤓")
+  implicit val system = ActorSystem("worker-pool")
+
+  master ! StartJob
+  master ! GetResult
+
 }
