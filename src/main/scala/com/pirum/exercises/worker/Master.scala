@@ -5,7 +5,7 @@ import com.pirum.exercises.worker.Master.{DisplayResult, GetResult, StartJob}
 import akka.actor.{Actor, PoisonPill, Timers}
 import akka.routing.Broadcast
 import com.pirum.exercises.worker.Worker.Work
-import com.pirum.exercises.worker.Utils._
+import com.pirum.exercises.worker.Program._
 
 object Master {
   case object StartJob
