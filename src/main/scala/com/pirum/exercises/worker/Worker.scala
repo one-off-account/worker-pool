@@ -3,7 +3,7 @@ package com.pirum.exercises.worker
 import scala.concurrent.duration.FiniteDuration
 import akka.actor.{Actor, Timers}
 import com.pirum.exercises.worker.Worker.{HandleTask, Work}
-import com.pirum.exercises.worker.Utils._
+import com.pirum.exercises.worker.Program._
 
 object Worker {
   case class Work(task: Task, timeout: FiniteDuration)
